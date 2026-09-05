@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+outputs/
+configs/mcp_servers.json
+data/train.jsonl
+data/valid.jsonl
+novel_memory/*
+!.gitkeep
+*.safetensors
+*.bin
+tests/_runtime/
+tests/tmp*/
+
+.idea/

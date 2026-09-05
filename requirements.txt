@@ -1,0 +1,21 @@
+# Install with: python -m pip install -r requirements.txt
+torch
+torchvision
+torchaudio
+transformers>=4.51,<5
+datasets>=3.5,<4
+peft>=0.15,<0.18
+trl>=0.17,<0.20
+accelerate>=1.5,<2
+bitsandbytes>=0.45
+sentencepiece
+safetensors
+einops
+scipy
+faiss-cpu
+streamlit
+langchain>=1.0,<2
+mcp>=1.9,<2
+# Optional: LangChain wrappers for MCP tools. The built-in stdio bridge works
+# without this package, which is useful in offline environments.
+# langchain-mcp-adapters>=0.1,<1

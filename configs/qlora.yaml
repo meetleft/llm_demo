@@ -1,0 +1,29 @@
+# RTX 3060 6GB / Python 3.12 起步配置
+model_name_or_path: Qwen/Qwen2.5-1.5B-Instruct
+output_dir: outputs/qwen25-1.5b-novel-lora
+train_file: data/train.jsonl
+validation_file: data/valid.jsonl
+load_in_4bit: true
+bnb_4bit_quant_type: nf4
+bnb_4bit_compute_dtype: float16
+bnb_4bit_use_double_quant: true
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+max_seq_length: 1024
+num_train_epochs: 3
+learning_rate: 0.0001
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+fp16: true
+bf16: false
+logging_steps: 10
+save_steps: 200
+eval_steps: 200
+save_total_limit: 2
+seed: 42

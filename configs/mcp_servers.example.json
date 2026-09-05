@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "novel-memory": {
+      "transport": "stdio",
+      "command": "D:/conda_envs/python312/python.exe",
+      "args": [
+        "D:/python_work/novel_llm/scripts/novel_memory_mcp.py"
+      ],
+      "env": {
+        "NOVEL_MEMORY_PATH": "D:/python_work/novel_llm/novel_memory/my_novel"
+      }
+    },
+    "filesystem": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "D:/python_work/novel_llm/novel_memory"
+      ]
+    }
+  }
+}
